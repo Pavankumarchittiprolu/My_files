@@ -1,0 +1,42 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+table{
+    border-collapse: collapse;
+    text-align: left;
+    box-shadow: 0 4px 8px rgb(0,0,0,0.1);
+    padding: 10px;
+}
+
+td{
+    padding: 10px;
+}
+input[type="text"],input[type='password']{
+    text-align: center;
+}
+
+input[type='submit']{
+    padding: 8px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+
+}
+
+input[type='submit']:hover{
+    background-color: #0056b3;
+
+}
+
+tr:last-child td{
+    text-align: center;
+}

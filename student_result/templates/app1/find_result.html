@@ -1,0 +1,42 @@
+{%extends 'app1/home.html'%}
+{%block content%}
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <form action="/find_result">
+    <table width="100%">
+        <tr>
+            <td>Rollno </td>
+            <td><input type="text" name="rno"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Find results"></td>
+        </tr>
+        <tr >
+            <td>Rollno</td>
+            <td>Name </td>
+            <td>Subject1</td>
+            <td>Result</td>
+            <td>Subject2</td>
+            <td>Result</td>
+        </tr>
+        <tr>
+            <td>{{r}}</td>
+            <td>{{name}}</td>
+            <td>{{s1}}</td>
+            <td>{{r1}}</td>
+            <td>{{s2}}</td>
+            <td>{{r2}}</td>
+        </tr>
+    </table>
+   </form>
+   {{msg}}
+    {%endblock%}
+</body>
+</html>

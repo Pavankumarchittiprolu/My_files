@@ -1,0 +1,51 @@
+{%extends 'app1/home.html'%}
+{%block content%}
+      
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table width="100%">
+        <tr>
+            <th>Rollno</th>
+            <th>Name </th>
+            <th>Subject1</th>
+            <th>Result</th>
+            <th>Subject2 </th>
+            <th>Result</th>
+        </tr>
+        {%for q in qs%}
+
+        <tr>
+            <td>{{q.rollno}}</td>
+            
+            <td>{{q.name}}</td>
+            
+            <td>{{q.subject1}}</td>
+            <td>{%if q.subject1 >= 40%}
+                {{"Pass"}}
+            {%else%}
+            {{"Fail"}}
+            {%endif%}
+            </td>
+            <td>{{q.subject2}}</td>
+            <td>{%if q.subject2 >= 40%}
+                {{"Pass"}}
+            {%else%}
+            {{"Fail"}}
+            {%endif%}
+            
+        </tr>
+        {%endfor%}
+    </table>
+    {{msg}}
+    
+    {%endblock%}
+</body>
+</html>

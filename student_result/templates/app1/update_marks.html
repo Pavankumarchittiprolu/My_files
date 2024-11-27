@@ -1,0 +1,36 @@
+{%extends 'app1/home.html'%}
+{%block content%}
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form action="/update_view">
+    <table>
+        <tr>
+            <td>Rollno </td>
+            <td><input type="text" name="rno"></td>
+        </tr>
+        <tr>
+            <td>Subject 1</td>
+            <td><input type="text" name="sub1"></td>
+        </tr>
+        <tr>
+            <td>Subject 2</td>
+            <td><input type="text" name="sub2"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="update"></td>
+        </tr>
+    </table>
+</form>
+{{msg}}
+
+{%endblock%}
+</body>
+</html>
