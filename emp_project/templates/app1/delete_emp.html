@@ -1,0 +1,70 @@
+{%extends 'app1/home.html'%}
+{%block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        table{
+            width: 250px;
+            height: 100px;
+            box-shadow: 0 0 0.8px black;
+            padding: 20px;
+            
+        }
+        td{
+            padding: 20px;
+            font-size: large;
+        }
+        input[type="text"]{
+            text-align: center;
+            height: 25px;
+            font-size: large;
+        }
+        input[type="submit"]{
+            padding: 8px;
+            background-color: rgb(18, 61, 255);
+            color: white;
+            font-size: large;
+            border-radius: 6px;
+            margin-left: 40%;
+        }
+        input[type="submit"]:hover{
+            background-color: rgb(49, 132, 255);
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <section>
+    <table >
+        <form action="/delete_emp_view">
+        <tr>
+            <td>Empno</td>
+            <td><input type="text" name="empno"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit"m value="Delete">
+            </td>
+        </tr>
+    
+        
+</form>
+    </table>
+    {{msg}}
+</section>
+    {%endblock%}
+
+</body>
+</html>

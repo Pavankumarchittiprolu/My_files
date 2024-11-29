@@ -1,0 +1,41 @@
+
+{%extends 'app1/home.html'%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    table{
+        width: 300px;
+    }
+   </style>
+</head>
+<body>
+    <section>
+        {%block content%}
+        <table>
+            <form action="/add_dept_view">
+            <tr>
+                <td>Deptno </td>
+                <td><input type="text" name="deptno"></td>
+            </tr>
+            <tr>
+                <td>Dept name </td>
+                <td><input type="text" name="deptname"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="Add Dept"></td>
+               
+            </tr>
+        </table>
+    </form>
+    {{msg}}
+    </section>
+
+
+    {%endblock%}
+</body>
+</html>
