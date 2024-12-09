@@ -1,0 +1,48 @@
+{%extends 'app1/home.html'%}
+{%block content%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 98%;
+            border: 1px solid black;
+            margin-left: 16px;
+            text-align: center;
+        }
+        tr{
+            border: 1px solid black;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+<table >
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th></th>
+        <th></th>
+    </tr>
+    {%for row in prods%}
+    <tr>
+        <td>{{row.prodId}}</td>
+        <td>{{row.prodname}}</td>
+        <td>{{row.qty}}</td>
+        <td>{{row.price}}</td>
+        <td><a class="btn btn-primary" href="/edit_prod/{{row.prodId}}" role="button">Edit</a></td>
+        <td><a class="btn btn-danger" href="/delete_prod/{{row.prodId}}" role="button">Delete</a></td>
+    </tr>
+    {%endfor%}
+</table>
+
+{%endblock%}    
+</body>
+</html>
